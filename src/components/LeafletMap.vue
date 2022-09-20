@@ -51,6 +51,9 @@ export default defineComponent({
         ...props.applicationConfig.tileLayerOptions
       }
       L.tileLayer(urlTemplate, options).addTo(mapObject)
+      L.control.scale({
+        imperial: false
+      }).addTo(mapObject)
 
       const assetsBaseUrl = props.applicationConfig.assetsBaseUrl
       const gpxOptions = {
