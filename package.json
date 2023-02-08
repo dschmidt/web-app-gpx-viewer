@@ -7,8 +7,7 @@
   "scripts": {
     "lint": "eslint src --ext vue --ext js --ext ts --color",
     "build": "pnpm vite build",
-    "build:w": "pnpm vite build --watch",
-    "vite": "vite"
+    "build:w": "pnpm vite build --watch"
   },
   "devDependencies": {
     "@ownclouders/eslint-config": "npm:@ownclouders/eslint-config",
