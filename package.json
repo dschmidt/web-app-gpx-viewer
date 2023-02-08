@@ -3,60 +3,39 @@
   "version": "0.0.0",
   "description": "ownCloud Web GPX Viewer",
   "license": "AGPL-3.0",
+  "type": "module",
   "scripts": {
     "lint": "eslint src --ext vue --ext js --ext ts --color",
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "test": "echo 'Not implemented'"
+    "build": "pnpm vite build",
+    "build:w": "pnpm vite build --watch",
+    "vite": "vite"
   },
   "devDependencies": {
-    "@babel/core": "7.18.0",
-    "@babel/eslint-parser": "7.17.0",
-    "@babel/polyfill": "7.12.1",
-    "@babel/preset-env": "7.18.0",
-    "@babel/register": "7.17.7",
-    "@erquhart/rollup-plugin-node-builtins": "2.1.5",
-    "@rollup/plugin-commonjs": "21.1.0",
-    "@rollup/plugin-json": "4.1.0",
-    "@rollup/plugin-replace": "4.0.0",
-    "@typescript-eslint/eslint-plugin": "5.26.0",
-    "@typescript-eslint/parser": "5.26.0",
-    "@vue/composition-api": "1.6.2",
-    "@vue/runtime-dom": "3.2.36",
-    "axios": "0.27.2",
-    "babel-core": "7.0.0-bridge.0",
-    "eslint": "8.16.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jest": "25.7.0",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-promise": "6.0.0",
-    "eslint-plugin-unused-imports": "2.0.0",
-    "eslint-plugin-vue": "8.7.1",
-    "eslint-plugin-vuejs-accessibility": "1.1.1",
+    "@ownclouders/eslint-config": "npm:@ownclouders/eslint-config",
+    "@ownclouders/prettier-config": "npm:@ownclouders/prettier-config",
+    "@ownclouders/tsconfig": "npm:@ownclouders/tsconfig",
+    "@ownclouders/extension-vite-config": "npm:@ownclouders/extension-vite-config",
+    "eslint": "8.31.0",
     "prettier": "2.6.2",
-    "rollup": "2.74.1",
-    "rollup-plugin-babel": "4.4.0",
-    "rollup-plugin-filesize": "9.1.2",
-    "rollup-plugin-import-css": "3.0.3",
-    "rollup-plugin-node-globals": "1.4.0",
-    "rollup-plugin-node-resolve": "5.2.0",
-    "rollup-plugin-terser": "7.0.2",
-    "rollup-plugin-ts": "2.0.7",
-    "rollup-plugin-vue": "5.1.9",
-    "typescript": "4.6.4",
-    "vue-template-compiler": "2.6.14"
+    "sass":"1.58.0",
+    "typescript": "~4.9.5",
+    "vite": "4.1.1",
+    "vue": "3.2.47"
   },
   "dependencies": {
     "@types/leaflet": "^1.8.0",
     "leaflet": "^1.8.0",
     "leaflet-gpx": "^1.7.0",
-    "lodash-es": "^4.17.21",
-    "luxon": "^3.0.3",
-    "rollup-plugin-copy": "^3.4.0",
-    "vue-router": "^3.5.3",
-    "vuex": "^3.6.2"
+    "web-client": "npm:@ownclouders/web-client",
+    "web-pkg": "npm:@ownclouders/web-pkg"
+  },
+  "pnpm": {
+    "packageExtensions": {
+      "@ownclouders/web-pkg": {
+        "dependencies": {
+          "rollup-plugin-node-polyfills": "*"
+        }
+      }
+    }
   }
 }

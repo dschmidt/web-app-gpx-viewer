@@ -2,7 +2,7 @@
   <div>
     <!-- FIXME: this is a mess but I could not make the style import work any other way ... -->
     <component is="style" type="text/css">{{ leafletCss }}</component>
-    <div ref="mapElement" class="leaftletContainer" id="leafletContainer"/>
+    <div ref="mapElement" class="leafletContainer" id="leafletContainer" style="height: 80%;"/>
     <table style="border-spacing: 10px;">
       <tr>
         <th>Distance</th>
@@ -21,9 +21,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, onBeforeUnmount } from '@vue/composition-api'
+import { defineComponent, onMounted, ref, onBeforeUnmount } from 'vue'
 
-import leafletCss from "leaflet/dist/leaflet.css"
+import leafletCss from "leaflet/dist/leaflet.css?inline"
 import L from "leaflet-gpx"
 
 export default defineComponent({
@@ -94,8 +94,4 @@ export default defineComponent({
 </script>
 
 <style type="scss">
-#leafletContainer {
-  height: 80%;
-}
-
 </style>

@@ -8,15 +8,13 @@
 </template>
 
 <script lang="ts">
-import AppIndex from './index.js'
-import { defineComponent, ref, unref, onBeforeUnmount, onMounted } from '@vue/composition-api'
+import { defineComponent, ref, unref, onMounted } from 'vue'
 
-import AppTopBar from './boilerplate/web-pkg/components/AppTopBar.vue'
-
+import AppTopBar from 'web-pkg/src/components/AppTopBar.vue'
 
 import LeafletMap from './components/LeafletMap.vue'
-import { useAppDefaults } from './boilerplate/web-pkg/src/composables/appDefaults/useAppDefaults'
-import { DavProperties } from './boilerplate/web-pkg/src/constants'
+import { useAppDefaults } from 'web-pkg/src/composables/appDefaults/useAppDefaults'
+import { FileContext } from 'web-pkg'
 
 export default defineComponent({
   name: 'GpxViewerRoot',
@@ -24,7 +22,7 @@ export default defineComponent({
     AppTopBar,
     LeafletMap
   },
-  setup() {
+  setup () {
     const appDefaults = useAppDefaults({
         applicationId: 'gpx-viewer'
     })
@@ -34,13 +32,14 @@ export default defineComponent({
     const resource = ref(null)
     const gpx = ref('')
 
-    const loadGpx = async (fileContext) => {
+    const loadGpx = async (fileContext: FileContext) => {
       try {
         loading.value = true
-        resource.value = await appDefaults.getFileResource(unref(fileContext.path), DavProperties.Default)
-        gpx.value = (await appDefaults.getFileContents(resource.value.webDavPath, {})).body
+        resource.value = await appDefaults.getFileInfo(fileContext)
+        gpx.value = (await appDefaults.getFileContents(fileContext, {})).body
         loading.value = false
       } catch (e) {
+        console.log('ERROR', e)
         loadingError.value = true
       }
     }
