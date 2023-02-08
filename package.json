@@ -11,9 +11,9 @@
   },
   "devDependencies": {
     "@ownclouders/eslint-config": "npm:@ownclouders/eslint-config",
+    "@ownclouders/extension-vite-config": "npm:@ownclouders/extension-vite-config",
     "@ownclouders/prettier-config": "npm:@ownclouders/prettier-config",
     "@ownclouders/tsconfig": "npm:@ownclouders/tsconfig",
-    "@ownclouders/extension-vite-config": "npm:@ownclouders/extension-vite-config",
     "eslint": "8.31.0",
     "prettier": "2.6.2",
     "sass":"1.58.0",
@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "@types/leaflet": "^1.8.0",
-    "leaflet": "^1.8.0",
     "leaflet-gpx": "^1.7.0",
+    "leaflet": "^1.8.0",
     "web-client": "npm:@ownclouders/web-client",
     "web-pkg": "npm:@ownclouders/web-pkg"
   },
