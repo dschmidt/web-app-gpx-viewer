@@ -1,5 +1,5 @@
 <template>
-    <main>
+  <main>
     <app-top-bar :resource="resource" @close="closeApp" />
     <div v-if="loading">Loading</div>
     <div v-else-if="loadingError">Loading Error</div>
@@ -22,9 +22,9 @@ export default defineComponent({
     AppTopBar,
     LeafletMap
   },
-  setup () {
+  setup() {
     const appDefaults = useAppDefaults({
-        applicationId: 'gpx-viewer'
+      applicationId: 'gpx-viewer'
     })
 
     const loading = ref(true)
@@ -47,7 +47,6 @@ export default defineComponent({
     onMounted(() => {
       loadGpx(unref(appDefaults.currentFileContext))
     })
-
 
     return {
       ...appDefaults,
