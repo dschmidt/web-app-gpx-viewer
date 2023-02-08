@@ -10,7 +10,7 @@ const distDir = 'dist'
 
 export const defineConfig = (overrides = {}) => {
   return ({ command, mode }) => {
-    console.log('command', command, 'mode', mode)
+    // console.log('command', command, 'mode', mode)
     const isProduction = mode === 'production'
     // read package name from vite workspace
     const packageJson = JSON.parse(
