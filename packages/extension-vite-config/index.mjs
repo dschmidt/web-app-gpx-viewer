@@ -12,10 +12,13 @@ export const defineConfig = (overrides = {}) => {
   return ({ command, mode }) => {
     // console.log('command', command, 'mode', mode)
     const isProduction = mode === 'production'
+
     // read package name from vite workspace
     const packageJson = JSON.parse(
       readFileSync(join(searchForWorkspaceRoot(cwd()), 'package.json')).toString()
     )
+
+    // take vite standard config and reuse it for rollup-plugin-serve config
     const { https, port } = overrides?.server
 
     return mergeConfig(
