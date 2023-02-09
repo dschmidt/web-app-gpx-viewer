@@ -12,17 +12,32 @@ export const defineConfig = (overrides = {}) => {
   return ({ command, mode }) => {
     // console.log('command', command, 'mode', mode)
     const isProduction = mode === 'production'
+    const isServing = !isProduction
 
     // read package name from vite workspace
     const packageJson = JSON.parse(
       readFileSync(join(searchForWorkspaceRoot(cwd()), 'package.json')).toString()
     )
 
+    const name = packageJson.name
+
     // take vite standard config and reuse it for rollup-plugin-serve config
-    const { https, port } = overrides?.server
+    const { https, port = 9210, host = 'localhost' } = overrides?.server
+    const isHttps = !!https
+
+    if (isServing) {
+      console.log(
+        `>>> Serving extension at http${isHttps ? 's' : ''}://${host}:${port}/js/${name}.js`
+      )
+    }
 
     return mergeConfig(
       {
+        server: {
+          host,
+          port,
+          strictPort: true
+        },
         resolve: {
           alias: {
             path: 'rollup-plugin-node-polyfills/polyfills/path'
@@ -35,7 +50,7 @@ export const defineConfig = (overrides = {}) => {
             external: ['vue', 'vuex', 'luxon', 'web-pkg', 'web-client', 'vue3-gettext'],
             preserveEntrySignatures: 'strict',
             input: {
-              [packageJson.name]: './src/index.ts'
+              [name]: './src/index.ts'
             },
             output: {
               format: 'amd',
@@ -44,7 +59,7 @@ export const defineConfig = (overrides = {}) => {
               entryFileNames: join('js', `[name]${isProduction ? '-[hash]' : ''}.js`)
             },
             plugins: [
-              command === 'server' &&
+              isServing &&
                 serve({
                   headers: {
                     'access-control-allow-origin': '*'
