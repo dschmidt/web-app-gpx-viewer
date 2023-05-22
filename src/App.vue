@@ -1,5 +1,5 @@
 <template>
-    <main>
+  <main>
     <app-top-bar :resource="resource" @close="closeApp" />
     <div v-if="loading">Loading</div>
     <div v-else-if="loadingError">Loading Error</div>
@@ -8,15 +8,10 @@
 </template>
 
 <script lang="ts">
-import AppIndex from './index.js'
-import { defineComponent, ref, unref, onBeforeUnmount, onMounted } from '@vue/composition-api'
-
-import AppTopBar from './boilerplate/web-pkg/components/AppTopBar.vue'
-
+import { defineComponent, ref, unref, onMounted } from 'vue'
 
 import LeafletMap from './components/LeafletMap.vue'
-import { useAppDefaults } from './boilerplate/web-pkg/src/composables/appDefaults/useAppDefaults'
-import { DavProperties } from './boilerplate/web-pkg/src/constants'
+import { FileContext, AppTopBar, useAppDefaults } from '@ownclouders/web-pkg'
 
 export default defineComponent({
   name: 'GpxViewerRoot',
@@ -26,7 +21,7 @@ export default defineComponent({
   },
   setup() {
     const appDefaults = useAppDefaults({
-        applicationId: 'gpx-viewer'
+      applicationId: 'gpx-viewer'
     })
 
     const loading = ref(true)
@@ -34,13 +29,14 @@ export default defineComponent({
     const resource = ref(null)
     const gpx = ref('')
 
-    const loadGpx = async (fileContext) => {
+    const loadGpx = async (fileContext: FileContext) => {
       try {
         loading.value = true
-        resource.value = await appDefaults.getFileResource(unref(fileContext.path), DavProperties.Default)
-        gpx.value = (await appDefaults.getFileContents(resource.value.webDavPath, {})).body
+        resource.value = await appDefaults.getFileInfo(fileContext)
+        gpx.value = (await appDefaults.getFileContents(fileContext, {})).body
         loading.value = false
       } catch (e) {
+        console.log('ERROR', e)
         loadingError.value = true
       }
     }
@@ -48,7 +44,6 @@ export default defineComponent({
     onMounted(() => {
       loadGpx(unref(appDefaults.currentFileContext))
     })
-
 
     return {
       ...appDefaults,

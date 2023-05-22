@@ -1,4 +1,5 @@
-/node_modules/
-/assets/
-/.drone.yml
-/yarn-error.log
+node_modules/
+assets/
+dist/
+.drone.yml
+yarn-error.log

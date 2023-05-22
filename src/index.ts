@@ -22,7 +22,7 @@ const appInfo = {
 
 const routes = [
   {
-    path: '/:filePath*',
+    path: '/:driveAliasAndItem(.*)?',
     component: App,
     name: 'gpx-viewer',
     meta: {

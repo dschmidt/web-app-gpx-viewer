@@ -45,21 +45,21 @@ def build():
                 "name": "install",
                 "image": "owncloudci/nodejs:16",
                 "pull": "always",
-                "commands": ["yarn install --frozen-lockfile"],
+                "commands": ["pnpm install"],
             },
             {
                 "name": "lint",
                 "image": "owncloudci/nodejs:16",
                 "pull": "always",
                 "commands": [
-                    "yarn run lint",
+                    "pnpm lint",
                 ],
             },
             {
                 "name": "build",
                 "image": "owncloudci/nodejs:16",
                 "pull": "always",
-                "commands": ["yarn run build"],
+                "commands": ["pnpm build"],
             },
             {
                 "name": "docker-dryrun",
