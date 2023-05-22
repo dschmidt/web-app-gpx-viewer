@@ -2,7 +2,7 @@
   <div>
     <!-- FIXME: this is a mess but I could not make the style import work any other way ... -->
     <component :is="styleTag" type="text/css">{{ leafletCss }}</component>
-    <div id="leafletContainer" ref="mapElement" class="leafletContainer" style="height: 80%" />
+    <div id="leafletContainer" ref="mapElement" class="leafletContainer" />
     <table style="border-spacing: 10px">
       <tr>
         <th>Distance</th>
@@ -100,4 +100,7 @@ export default defineComponent({
 </script>
 
 <style type="scss">
+#leafletContainer {
+  height: 80%;
+}
 </style>
