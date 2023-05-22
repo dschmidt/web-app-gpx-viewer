@@ -4,7 +4,7 @@ packageExtensionsChecksum: f2bcfbf1c1d885441d53f021c21401c2
 
 specifiers:
   '@ownclouders/eslint-config': 0.0.1
-  '@ownclouders/extension-sdk': 0.0.1-alpha.3
+  '@ownclouders/extension-sdk': 0.0.1-alpha.4
   '@ownclouders/prettier-config': 0.0.1
   '@ownclouders/tsconfig': 0.0.4
   '@ownclouders/web-pkg': ^0.0.3
@@ -31,7 +31,7 @@ dependencies:
 
 devDependencies:
   '@ownclouders/eslint-config': 0.0.1_d53kpa2m4ze745ognmlpi6bjze
-  '@ownclouders/extension-sdk': 0.0.1-alpha.3_gxg4ghc2pqvkxktp4wknmsvlwy
+  '@ownclouders/extension-sdk': 0.0.1-alpha.4_gxg4ghc2pqvkxktp4wknmsvlwy
   '@ownclouders/prettier-config': 0.0.1
   '@ownclouders/tsconfig': 0.0.4
   '@types/node': 20.2.3
@@ -605,8 +605,8 @@ packages:
       - supports-color
     dev: true
 
-  /@ownclouders/extension-sdk/0.0.1-alpha.3_gxg4ghc2pqvkxktp4wknmsvlwy:
-    resolution: {integrity: sha512-XpzQlYHtNJqRfiR3cW9lcnwJo5qK6yWplBqd70NEwzmqaBWp5rnfI6cDhZvmLi4t3/qBx0oMHWmX8xAwFutgNQ==}
+  /@ownclouders/extension-sdk/0.0.1-alpha.4_gxg4ghc2pqvkxktp4wknmsvlwy:
+    resolution: {integrity: sha512-G0kkfSICxJqyUmtHUhk9xVqDS53NhjzGCHXEO9L2FQyhLnIrdi/Q9FDYn6gth5SF1w4kIXcKPXQFSosWL0YhRQ==}
     peerDependencies:
       sass: 1.62.0
       vite: ^4.1.1
