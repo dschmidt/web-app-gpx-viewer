@@ -10,11 +10,8 @@
 <script lang="ts">
 import { defineComponent, ref, unref, onMounted } from 'vue'
 
-import AppTopBar from 'web-pkg/src/components/AppTopBar.vue'
-
 import LeafletMap from './components/LeafletMap.vue'
-import { useAppDefaults } from 'web-pkg/src/composables/appDefaults/useAppDefaults'
-import { FileContext } from 'web-pkg'
+import { FileContext, AppTopBar, useAppDefaults } from '@ownclouders/web-pkg'
 
 export default defineComponent({
   name: 'GpxViewerRoot',

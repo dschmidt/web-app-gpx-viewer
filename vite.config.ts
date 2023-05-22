@@ -1,4 +1,4 @@
-import { defineConfig } from '@ownclouders/extension-vite-config'
+import { defineConfig } from '@ownclouders/extension-sdk'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({

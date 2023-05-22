@@ -10,24 +10,27 @@
     "build:w": "pnpm vite build --watch --mode development"
   },
   "devDependencies": {
-    "@ownclouders/eslint-config": "npm:@ownclouders/eslint-config",
-    "@ownclouders/extension-vite-config": "npm:@ownclouders/extension-vite-config",
-    "@ownclouders/prettier-config": "npm:@ownclouders/prettier-config",
-    "@ownclouders/tsconfig": "npm:@ownclouders/tsconfig",
+    "@ownclouders/eslint-config": "0.0.1",
+    "@ownclouders/extension-sdk": "0.0.1-alpha.3",
+    "@ownclouders/prettier-config": "@ownclouders/prettier-config",
+    "@ownclouders/tsconfig": "0.0.4",
+    "@types/node": "^20.2.3",
     "eslint": "8.31.0",
     "prettier": "2.6.2",
-    "sass": "1.58.0",
-    "typescript": "~4.9.5",
+    "typescript": "4.9.5",
     "vite": "4.1.1",
     "vite-plugin-static-copy": "^0.13.0",
-    "vue": "3.2.47"
+    "vue": "3.3.4"
   },
   "dependencies": {
     "@types/leaflet": "^1.8.0",
     "leaflet": "^1.8.0",
-    "leaflet-gpx": "^1.7.0",
-    "web-client": "npm:@ownclouders/web-client",
-    "web-pkg": "npm:@ownclouders/web-pkg"
+    "leaflet-gpx": "^1.7.0"
+  },
+  "peerDependencies": {
+    "@ownclouders/web-pkg": "^0.0.3",
+    "web-client": "npm:@ownclouders/web-client@^0.0.1",
+    "web-pkg": "npm:@ownclouders/web-pkg@^0.0.3"
   },
   "pnpm": {
     "packageExtensions": {
