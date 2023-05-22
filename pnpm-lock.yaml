@@ -4,8 +4,8 @@ packageExtensionsChecksum: f2bcfbf1c1d885441d53f021c21401c2
 
 specifiers:
   '@ownclouders/eslint-config': 0.0.1
-  '@ownclouders/extension-sdk': 0.0.1-alpha.2
-  '@ownclouders/prettier-config': '@ownclouders/prettier-config'
+  '@ownclouders/extension-sdk': 0.0.1-alpha.3
+  '@ownclouders/prettier-config': 0.0.1
   '@ownclouders/tsconfig': 0.0.4
   '@ownclouders/web-pkg': ^0.0.3
   '@types/leaflet': ^1.8.0
@@ -14,7 +14,6 @@ specifiers:
   leaflet: ^1.8.0
   leaflet-gpx: ^1.7.0
   prettier: 2.6.2
-  sass: 1.58.0
   typescript: 4.9.5
   vite: 4.1.1
   vite-plugin-static-copy: ^0.13.0
@@ -32,15 +31,14 @@ dependencies:
 
 devDependencies:
   '@ownclouders/eslint-config': 0.0.1_d53kpa2m4ze745ognmlpi6bjze
-  '@ownclouders/extension-sdk': 0.0.1-alpha.2_i7th4mrosa744ol7ljg62q72wq
-  '@ownclouders/prettier-config': link:@ownclouders/prettier-config
+  '@ownclouders/extension-sdk': 0.0.1-alpha.3_gxg4ghc2pqvkxktp4wknmsvlwy
+  '@ownclouders/prettier-config': 0.0.1
   '@ownclouders/tsconfig': 0.0.4
   '@types/node': 20.2.3
   eslint: 8.31.0
   prettier: 2.6.2
-  sass: 1.58.0
   typescript: 4.9.5
-  vite: 4.1.1_bhafo2js54gvaelg3elj4ssfhi
+  vite: 4.1.1_mpazvhlne75bkfi3z7ps2cum4i
   vite-plugin-static-copy: 0.13.0_vite@4.1.1
   vue: 3.3.4
 
@@ -607,8 +605,8 @@ packages:
       - supports-color
     dev: true
 
-  /@ownclouders/extension-sdk/0.0.1-alpha.2_i7th4mrosa744ol7ljg62q72wq:
-    resolution: {integrity: sha512-ePk+ddqMUt2I2Ue1za12i0zInm3NTV7squHAh2MAz8/AlsESBsJOVhysX5WBHUoMv4JFE9igH17yBx92GmcJDg==}
+  /@ownclouders/extension-sdk/0.0.1-alpha.3_gxg4ghc2pqvkxktp4wknmsvlwy:
+    resolution: {integrity: sha512-XpzQlYHtNJqRfiR3cW9lcnwJo5qK6yWplBqd70NEwzmqaBWp5rnfI6cDhZvmLi4t3/qBx0oMHWmX8xAwFutgNQ==}
     peerDependencies:
       sass: 1.62.0
       vite: ^4.1.1
@@ -616,10 +614,16 @@ packages:
       '@vitejs/plugin-vue': 4.2.1_vite@4.1.1+vue@3.3.4
       rollup-plugin-node-polyfills: 0.2.1
       rollup-plugin-serve: 2.0.2
-      sass: 1.58.0
-      vite: 4.1.1_bhafo2js54gvaelg3elj4ssfhi
+      sass: 1.62.0
+      vite: 4.1.1_mpazvhlne75bkfi3z7ps2cum4i
     transitivePeerDependencies:
       - vue
+    dev: true
+
+  /@ownclouders/prettier-config/0.0.1:
+    resolution: {integrity: sha512-vTQ11OCFgUxPJxAAIcGk05KByZL6F2fmdoUCKVuyMspsGvap3H0KjCIHY5c+Gz390tBfZf6vsnuoJkhGOOBgQw==}
+    dependencies:
+      prettier: 2.8.3
     dev: true
 
   /@ownclouders/tsconfig/0.0.4:
@@ -880,7 +884,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.1.1_bhafo2js54gvaelg3elj4ssfhi
+      vite: 4.1.1_mpazvhlne75bkfi3z7ps2cum4i
       vue: 3.3.4
     dev: true
 
@@ -2873,9 +2877,9 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /sass/1.58.0:
-    resolution: {integrity: sha512-PiMJcP33DdKtZ/1jSjjqVIKihoDc6yWmYr9K/4r3fVVIEDAluD0q7XZiRKrNJcPK3qkLRF/79DND1H5q1LBjgg==}
-    engines: {node: '>=12.0.0'}
+  /sass/1.62.0:
+    resolution: {integrity: sha512-Q4USplo4pLYgCi+XlipZCWUQz5pkg/ruSSgJ0WRDSb/+3z9tXUOkQ7QPYn4XrhZKYAK4HlpaQecRwKLJX6+DBg==}
+    engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
       chokidar: 3.5.3
@@ -3112,10 +3116,10 @@ packages:
       fast-glob: 3.2.12
       fs-extra: 11.1.0
       picocolors: 1.0.0
-      vite: 4.1.1_bhafo2js54gvaelg3elj4ssfhi
+      vite: 4.1.1_mpazvhlne75bkfi3z7ps2cum4i
     dev: true
 
-  /vite/4.1.1_bhafo2js54gvaelg3elj4ssfhi:
+  /vite/4.1.1_mpazvhlne75bkfi3z7ps2cum4i:
     resolution: {integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3145,7 +3149,7 @@ packages:
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 3.14.0
-      sass: 1.58.0
+      sass: 1.62.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
