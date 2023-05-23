@@ -42,7 +42,8 @@ export default defineComponent({
     }
 
     onMounted(() => {
-      loadGpx(unref(appDefaults.currentFileContext))
+      // unref does not deal well with MaybeRefs ...
+      loadGpx(unref(appDefaults.currentFileContext) as unknown as FileContext)
     })
 
     return {

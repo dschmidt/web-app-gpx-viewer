@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, onBeforeUnmount } from 'vue'
+import { defineComponent, onMounted, ref, onBeforeUnmount, Ref } from 'vue'
 
 import leafletCss from 'leaflet/dist/leaflet.css?inline'
 import L from 'leaflet-gpx'
@@ -41,7 +41,13 @@ export default defineComponent({
   setup(props) {
     const mapElement = ref()
     let mapObject = null
-    let meta = ref({})
+    let meta: Ref<{
+      name?: string
+      distance?: string
+      elevationGain?: string
+      elevationLoss?: string
+      elevationNet?: string
+    }> = ref({})
     onMounted(() => {
       mapObject = L.map('leafletContainer')
 
