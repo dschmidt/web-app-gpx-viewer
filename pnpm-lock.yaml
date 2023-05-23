@@ -1,7 +1,5 @@
 lockfileVersion: 5.4
 
-packageExtensionsChecksum: f2bcfbf1c1d885441d53f021c21401c2
-
 specifiers:
   '@ownclouders/eslint-config': 0.0.1
   '@ownclouders/extension-sdk': 0.0.1-alpha.4
@@ -18,22 +16,18 @@ specifiers:
   vite: 4.1.1
   vite-plugin-static-copy: ^0.13.0
   vue: 3.3.4
-  web-client: npm:@ownclouders/web-client@^0.0.1
-  web-pkg: npm:@ownclouders/web-pkg@^0.0.3
 
 dependencies:
-  '@ownclouders/web-pkg': 0.0.3_3j6sh6mkfnak45xd6j5fbwnara
-  '@types/leaflet': 1.8.0
+  '@ownclouders/web-pkg': 0.0.3_ddwlipigigktvfwu6pgen7scta
   leaflet: 1.8.0
   leaflet-gpx: 1.7.0
-  web-client: /@ownclouders/web-client/0.0.1_wuuoadpd2i73vggbvf3ttc2ali
-  web-pkg: /@ownclouders/web-pkg/0.0.3_3j6sh6mkfnak45xd6j5fbwnara
 
 devDependencies:
   '@ownclouders/eslint-config': 0.0.1_d53kpa2m4ze745ognmlpi6bjze
   '@ownclouders/extension-sdk': 0.0.1-alpha.4_gxg4ghc2pqvkxktp4wknmsvlwy
   '@ownclouders/prettier-config': 0.0.1
   '@ownclouders/tsconfig': 0.0.4
+  '@types/leaflet': 1.8.0
   '@types/node': 20.2.3
   eslint: 8.31.0
   prettier: 2.6.2
@@ -630,17 +624,7 @@ packages:
     resolution: {integrity: sha512-95IArf5N19fr8ROR/ifm35f4iBV+2epcAGbDrl/fYWEb5X6SNAG3Hr3SGYwxZ/RD+LDPRbRCb1+cZYguyJY9pg==}
     dev: true
 
-  /@ownclouders/web-client/0.0.1_wuuoadpd2i73vggbvf3ttc2ali:
-    resolution: {integrity: sha512-rXzGkCtYbFdLFmWj8h0aysEAT5zKUerXtQ1hfU6hy9b9QMly5JnaUr++WdiVXlnt0Ko9zGFmQsYwosJJkTO34A==}
-    peerDependencies:
-      axios: ^0.27.2
-      lodash-es: ^4.17.21
-    dependencies:
-      axios: 0.27.2
-      lodash-es: 4.17.21
-    dev: false
-
-  /@ownclouders/web-pkg/0.0.3_3j6sh6mkfnak45xd6j5fbwnara:
+  /@ownclouders/web-pkg/0.0.3_ddwlipigigktvfwu6pgen7scta:
     resolution: {integrity: sha512-tipiCVLhkQ+RXTArnUYmUkDsL+F9h0cZizxpEovs/WOys/XshsC61uTzbWSxlhHAd5bg/wOj/s4gqM6GxqYkqw==}
     peerDependencies:
       '@casl/ability': ^6.3.3
@@ -659,6 +643,11 @@ packages:
       vuex: 4.1.0
       web-client: npm:@ownclouders/web-client@0.0.1
       web-pkg: npm:@ownclouders/web-pkg@0.0.3
+    peerDependenciesMeta:
+      web-client:
+        optional: true
+      web-pkg:
+        optional: true
     dependencies:
       '@casl/ability': 6.5.0
       '@casl/vue': 2.2.1_4ulxwsxs42j7mikozhxocomog4
@@ -669,19 +658,16 @@ packages:
       luxon: 2.5.2
       mark.js: 8.11.1
       qs: 6.11.1
-      rollup-plugin-node-polyfills: 0.2.1
       uuid: 9.0.0
       vue-concurrency: 4.0.1_vue@3.3.4
       vue-router: 4.2.0_vue@3.3.4
       vue3-gettext: 2.5.0-alpha.1_a6dezdz3je235ci4e3tu4rayna
       vuex: 4.1.0_vue@3.3.4
-      web-client: /@ownclouders/web-client/0.0.1_wuuoadpd2i73vggbvf3ttc2ali
-      web-pkg: /@ownclouders/web-pkg/0.0.3_3j6sh6mkfnak45xd6j5fbwnara
     dev: false
 
   /@types/geojson/7946.0.10:
     resolution: {integrity: sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==}
-    dev: false
+    dev: true
 
   /@types/glob/7.2.0:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
@@ -702,7 +688,7 @@ packages:
     resolution: {integrity: sha512-+sXFmiJTFdhaXXIGFlV5re9AdqtAODoXbGAvxx02e5SHXL3ir7ClP5J7pahO8VmzKY3dth4RUS1nf2BTT+DW1A==}
     dependencies:
       '@types/geojson': 7946.0.10
-    dev: false
+    dev: true
 
   /@types/minimatch/5.1.2:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
@@ -1887,6 +1873,7 @@ packages:
 
   /estree-walker/0.6.1:
     resolution: {integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==}
+    dev: true
 
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
@@ -2506,6 +2493,7 @@ packages:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
     dependencies:
       sourcemap-codec: 1.4.8
+    dev: true
 
   /magic-string/0.30.0:
     resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
@@ -2837,11 +2825,13 @@ packages:
       estree-walker: 0.6.1
       magic-string: 0.25.7
       rollup-pluginutils: 2.8.2
+    dev: true
 
   /rollup-plugin-node-polyfills/0.2.1:
     resolution: {integrity: sha512-4kCrKPTJ6sK4/gLL/U5QzVT8cxJcofO0OU74tnB19F40cmuAKSzH5/siithxlofFEjwvw1YAhPmbvGNA6jEroA==}
     dependencies:
       rollup-plugin-inject: 3.0.2
+    dev: true
 
   /rollup-plugin-serve/2.0.2:
     resolution: {integrity: sha512-ALqyTbPhlf7FZ5RzlbDvMYvbKuCHWginJkTo6dMsbgji/a78IbsXox+pC83HENdkTRz8OXrTj+aShp3+3ratpg==}
@@ -2854,6 +2844,7 @@ packages:
     resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
     dependencies:
       estree-walker: 0.6.1
+    dev: true
 
   /rollup/3.14.0:
     resolution: {integrity: sha512-o23sdgCLcLSe3zIplT9nQ1+r97okuaiR+vmAPZPTDYB7/f3tgWIYNyiQveMsZwshBT0is4eGax/HH83Q7CG+/Q==}
@@ -2936,6 +2927,7 @@ packages:
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
     deprecated: Please use @jridgewell/sourcemap-codec instead
+    dev: true
 
   /stop-iteration-iterator/1.0.0:
     resolution: {integrity: sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==}
