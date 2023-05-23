@@ -14,6 +14,7 @@
     "@ownclouders/extension-sdk": "0.0.1-alpha.4",
     "@ownclouders/prettier-config": "0.0.1",
     "@ownclouders/tsconfig": "0.0.4",
+    "@types/leaflet": "^1.8.0",
     "@types/node": "^20.2.3",
     "eslint": "8.31.0",
     "prettier": "2.6.2",
@@ -23,22 +24,15 @@
     "vue": "3.3.4"
   },
   "dependencies": {
-    "@types/leaflet": "^1.8.0",
     "leaflet": "^1.8.0",
     "leaflet-gpx": "^1.7.0"
   },
   "peerDependencies": {
-    "@ownclouders/web-pkg": "^0.0.3",
-    "web-client": "npm:@ownclouders/web-client@^0.0.1",
-    "web-pkg": "npm:@ownclouders/web-pkg@^0.0.3"
+    "@ownclouders/web-pkg": "^0.0.3"
   },
   "pnpm": {
-    "packageExtensions": {
-      "@ownclouders/web-pkg": {
-        "dependencies": {
-          "rollup-plugin-node-polyfills": "*"
-        }
-      }
+    "peerDependencyRules": {
+      "ignoreMissing": ["@ownclouders/web-*", "web-*"]
     }
   }
 }
