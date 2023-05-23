@@ -13,7 +13,7 @@ LABEL maintainer="ownCloud GmbH <devops@owncloud.com>" \
 RUN rm -f /var/lib/nginx/html/*
 
 ADD docker/overlay /
-ADD assets/ /var/lib/nginx/html
+ADD dist/ /var/lib/nginx/html
 
 EXPOSE 8080
 

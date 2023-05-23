@@ -20,7 +20,7 @@ ownCloud Web GPX Viewer app.
   "external_apps": [
     {
       "id": "gpx-viewer",
-      "path": "http://gpxviewer.yourdomain.com/web-app-gpx-viewer.js",
+      "path": "http://gpxviewer.yourdomain.com/js/web-app-gpx-viewer.js",
       "config": {
         "assetsBaseUrl": "http://gpxviewer.yourdomain.com",
         "tileLayerUrlTemplate": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
