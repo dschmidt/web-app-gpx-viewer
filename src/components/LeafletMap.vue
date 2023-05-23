@@ -21,10 +21,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, onBeforeUnmount } from 'vue'
+import { defineComponent, onMounted, ref, onBeforeUnmount, Ref } from 'vue'
 
 import leafletCss from 'leaflet/dist/leaflet.css?inline'
 import L from 'leaflet-gpx'
+import { dirname } from '@ownclouders/web-pkg'
 
 export default defineComponent({
   props: {
@@ -40,7 +41,13 @@ export default defineComponent({
   setup(props) {
     const mapElement = ref()
     let mapObject = null
-    let meta = ref({})
+    let meta: Ref<{
+      name?: string
+      distance?: string
+      elevationGain?: string
+      elevationLoss?: string
+      elevationNet?: string
+    }> = ref({})
     onMounted(() => {
       mapObject = L.map('leafletContainer')
 
@@ -59,7 +66,7 @@ export default defineComponent({
         })
         .addTo(mapObject)
 
-      const assetsBaseUrl = props.applicationConfig.assetsBaseUrl
+      const assetsBaseUrl = `${dirname(dirname(import.meta.url))}/assets`
       const gpxOptions = {
         async: true,
         marker_options: {
