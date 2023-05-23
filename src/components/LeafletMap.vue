@@ -25,6 +25,7 @@ import { defineComponent, onMounted, ref, onBeforeUnmount } from 'vue'
 
 import leafletCss from 'leaflet/dist/leaflet.css?inline'
 import L from 'leaflet-gpx'
+import { dirname } from '@ownclouders/web-pkg'
 
 export default defineComponent({
   props: {
@@ -59,7 +60,7 @@ export default defineComponent({
         })
         .addTo(mapObject)
 
-      const assetsBaseUrl = props.applicationConfig.assetsBaseUrl
+      const assetsBaseUrl = `${dirname(dirname(import.meta.url))}/assets`
       const gpxOptions = {
         async: true,
         marker_options: {

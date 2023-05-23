@@ -22,7 +22,6 @@ ownCloud Web GPX Viewer app.
       "id": "gpx-viewer",
       "path": "http://gpxviewer.yourdomain.com/js/web-app-gpx-viewer.js",
       "config": {
-        "assetsBaseUrl": "http://gpxviewer.yourdomain.com",
         "tileLayerUrlTemplate": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         "tileLayerOptions": {
           "maxZoom": 19,
@@ -34,7 +33,6 @@ ownCloud Web GPX Viewer app.
 }
 ```
 
-`assetsBaseUrl` is unfortunately mandatory for now because apps currently have no other way to determine where they are hosted.
 `tileLayerUrlTemplate` and `tileLayerOptions` don't need to be specified as they default to these values anyway, but you can use these settings to override the defaults.
 
 ## Docker Tags and respective Dockerfile links
