@@ -11,6 +11,7 @@ const appInfo = {
   id: 'gpx-viewer',
   icon: 'map-2',
   iconFillType: 'line',
+  iconColor: 'green',
   extensions: [
     {
       extension: 'gpx',
