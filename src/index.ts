@@ -27,7 +27,7 @@ const routes = [
     component: App,
     name: 'gpx-viewer',
     meta: {
-      auth: false,
+      authContext: 'hybrid',
       title: $gettext('GPX Viewer'),
       patchCleanPath: true
     }
