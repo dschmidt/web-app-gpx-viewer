@@ -25,14 +25,23 @@
   },
   "dependencies": {
     "leaflet": "^1.8.0",
-    "leaflet-gpx": "^1.7.0"
+    "leaflet-gpx": "^1.7.0",
+    "rollup-plugin-node-polyfills": "^0.2.1"
   },
   "peerDependencies": {
-    "@ownclouders/web-pkg": "^0.0.3"
+    "@ownclouders/web-pkg": "0.0.4-alpha.1",
+    "vue-concurrency": "4.0.1",
+    "vue-router": "4.2.4",
+    "web-client": "file:../web/packages/web-client",
+    "web-pkg": "npm:@ownclouders/web-pkg@0.0.4-alpha.1"
   },
   "pnpm": {
     "peerDependencyRules": {
-      "ignoreMissing": ["@ownclouders/web-*", "web-*"]
+      "ignoreMissing": [
+        "@ownclouders/web-*",
+        "web-*",
+        "vue-concurrency"
+      ]
     }
   }
 }

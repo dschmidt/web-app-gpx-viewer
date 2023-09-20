@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -6,14 +6,29 @@ settings:
 
 dependencies:
   '@ownclouders/web-pkg':
-    specifier: ^0.0.3
-    version: 0.0.3(@casl/ability@6.5.0)(@casl/vue@2.2.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(qs@6.11.1)(uuid@9.0.0)(vue-concurrency@4.0.1)(vue-router@4.2.0)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0)
+    specifier: 0.0.4-alpha.1
+    version: 0.0.4-alpha.1(@casl/ability@6.5.0)(@casl/vue@2.2.1)(@microsoft/fetch-event-source@2.0.1)(@ownclouders/web-client@0.0.1)(@ownclouders/web-pkg@0.0.4-alpha.1)(@vueuse/core@10.4.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(password-sheriff@1.1.1)(pinia@2.1.6)(qs@6.11.1)(semver@7.3.8)(uuid@9.0.0)(vue-concurrency@4.0.1)(vue-router@4.2.4)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0)
   leaflet:
     specifier: ^1.8.0
     version: 1.8.0
   leaflet-gpx:
     specifier: ^1.7.0
     version: 1.7.0
+  rollup-plugin-node-polyfills:
+    specifier: ^0.2.1
+    version: 0.2.1
+  vue-concurrency:
+    specifier: 4.0.1
+    version: 4.0.1(vue@3.3.4)
+  vue-router:
+    specifier: 4.2.4
+    version: 4.2.4(vue@3.3.4)
+  web-client:
+    specifier: file:../web/packages/web-client
+    version: file:../web/packages/web-client(@casl/ability@6.5.0)(axios@0.27.2)(lodash-es@4.17.21)
+  web-pkg:
+    specifier: npm:@ownclouders/web-pkg@0.0.4-alpha.1
+    version: /@ownclouders/web-pkg@0.0.4-alpha.1(@casl/ability@6.5.0)(@casl/vue@2.2.1)(@microsoft/fetch-event-source@2.0.1)(@ownclouders/web-client@0.0.1)(@ownclouders/web-pkg@0.0.4-alpha.1)(@vueuse/core@10.4.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(password-sheriff@1.1.1)(pinia@2.1.6)(qs@6.11.1)(semver@7.3.8)(uuid@9.0.0)(vue-concurrency@4.0.1)(vue-router@4.2.4)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0)
 
 devDependencies:
   '@ownclouders/eslint-config':
@@ -560,6 +575,10 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
+  /@microsoft/fetch-event-source@2.0.1:
+    resolution: {integrity: sha512-W6CLUJ2eBMw3Rec70qrsEW0jOm/3twwJv21mrmj2yORiaVmVYGS4sSS5yUwvQc1ZlDLYGPnClVWmUUMagKNsfA==}
+    dev: false
+
   /@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1:
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
     dependencies:
@@ -641,26 +660,34 @@ packages:
     resolution: {integrity: sha512-95IArf5N19fr8ROR/ifm35f4iBV+2epcAGbDrl/fYWEb5X6SNAG3Hr3SGYwxZ/RD+LDPRbRCb1+cZYguyJY9pg==}
     dev: true
 
-  /@ownclouders/web-pkg@0.0.3(@casl/ability@6.5.0)(@casl/vue@2.2.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(qs@6.11.1)(uuid@9.0.0)(vue-concurrency@4.0.1)(vue-router@4.2.0)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0):
-    resolution: {integrity: sha512-tipiCVLhkQ+RXTArnUYmUkDsL+F9h0cZizxpEovs/WOys/XshsC61uTzbWSxlhHAd5bg/wOj/s4gqM6GxqYkqw==}
+  /@ownclouders/web-pkg@0.0.4-alpha.1(@casl/ability@6.5.0)(@casl/vue@2.2.1)(@microsoft/fetch-event-source@2.0.1)(@ownclouders/web-client@0.0.1)(@ownclouders/web-pkg@0.0.4-alpha.1)(@vueuse/core@10.4.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(password-sheriff@1.1.1)(pinia@2.1.6)(qs@6.11.1)(semver@7.3.8)(uuid@9.0.0)(vue-concurrency@4.0.1)(vue-router@4.2.4)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0):
+    resolution: {integrity: sha512-YMuYnULpfCCc9FmY2iQAhHQeCcdlIhaFgS/NOVIFMaaNXQKKbNRaRJ9L3J64/T6mN+KTIklMAbKq3DS2+Xk6ng==}
     peerDependencies:
       '@casl/ability': ^6.3.3
       '@casl/vue': ^2.2.1
-      axios: ^0.27.2
+      '@microsoft/fetch-event-source': ^2.0.1
+      '@vueuse/core': ^10.0.0
+      axios: ^0.27.2 || ^1.0.0
+      design-system: npm:@ownclouders/design-system@15.0.0-alpha.1
       filesize: ^9.0.11
       fuse.js: ^6.5.3
       lodash-es: ^4.17.21
       luxon: ^2.4.0
       mark.js: ^8.11.1
+      password-sheriff: ^1.1.1
+      pinia: ^2.1.3
       qs: ^6.10.3
+      semver: ^7.3.8
       uuid: ^9.0.0
       vue-concurrency: 4.0.1
       vue-router: 4.2.0
       vue3-gettext: 2.5.0-alpha.1
       vuex: 4.1.0
       web-client: npm:@ownclouders/web-client@0.0.1
-      web-pkg: npm:@ownclouders/web-pkg@0.0.3
+      web-pkg: npm:@ownclouders/web-pkg@0.0.4-alpha.1
     peerDependenciesMeta:
+      vue-concurrency:
+        optional: true
       web-client:
         optional: true
       web-pkg:
@@ -668,18 +695,25 @@ packages:
     dependencies:
       '@casl/ability': 6.5.0
       '@casl/vue': 2.2.1(@casl/ability@6.5.0)(vue@3.3.4)
+      '@microsoft/fetch-event-source': 2.0.1
+      '@vueuse/core': 10.4.1(vue@3.3.4)
       axios: 0.27.2
       filesize: 9.0.11
       fuse.js: 6.6.2
       lodash-es: 4.17.21
       luxon: 2.5.2
       mark.js: 8.11.1
+      password-sheriff: 1.1.1
+      pinia: 2.1.6(typescript@4.9.5)(vue@3.3.4)
       qs: 6.11.1
+      semver: 7.3.8
       uuid: 9.0.0
       vue-concurrency: 4.0.1(vue@3.3.4)
-      vue-router: 4.2.0(vue@3.3.4)
+      vue-router: 4.2.4(vue@3.3.4)
       vue3-gettext: 2.5.0-alpha.1(@vue/compiler-sfc@3.3.4)(vue@3.3.4)
       vuex: 4.1.0(vue@3.3.4)
+      web-client: file:../web/packages/web-client(@casl/ability@6.5.0)(axios@0.27.2)(lodash-es@4.17.21)
+      web-pkg: /@ownclouders/web-pkg@0.0.4-alpha.1(@casl/ability@6.5.0)(@casl/vue@2.2.1)(@microsoft/fetch-event-source@2.0.1)(@ownclouders/web-client@0.0.1)(@ownclouders/web-pkg@0.0.4-alpha.1)(@vueuse/core@10.4.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(password-sheriff@1.1.1)(pinia@2.1.6)(qs@6.11.1)(semver@7.3.8)(uuid@9.0.0)(vue-concurrency@4.0.1)(vue-router@4.2.4)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0)
     dev: false
 
   /@types/geojson@7946.0.10:
@@ -725,6 +759,10 @@ packages:
   /@types/semver@7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
     dev: true
+
+  /@types/web-bluetooth@0.0.17:
+    resolution: {integrity: sha512-4p9vcSmxAayx72yn70joFoL44c9MO/0+iVEBIQXe3v2h2SiAsEIo/G5v6ObFWvNKRFjbrVadNf9LqEEZeQPzdA==}
+    dev: false
 
   /@typescript-eslint/eslint-plugin@5.50.0(@typescript-eslint/parser@5.50.0)(eslint@8.31.0)(typescript@4.9.5):
     resolution: {integrity: sha512-vwksQWSFZiUhgq3Kv7o1Jcj0DUNylwnIlGvKvLLYsq8pAWha6/WCnXUeaSoNNha/K7QSf2+jvmkxggC1u3pIwQ==}
@@ -1019,6 +1057,31 @@ packages:
 
   /@vue/shared@3.3.4:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}
+
+  /@vueuse/core@10.4.1(vue@3.3.4):
+    resolution: {integrity: sha512-DkHIfMIoSIBjMgRRvdIvxsyboRZQmImofLyOHADqiVbQVilP8VVHDhBX2ZqoItOgu7dWa8oXiNnScOdPLhdEXg==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.17
+      '@vueuse/metadata': 10.4.1
+      '@vueuse/shared': 10.4.1(vue@3.3.4)
+      vue-demi: 0.14.6(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  /@vueuse/metadata@10.4.1:
+    resolution: {integrity: sha512-2Sc8X+iVzeuMGHr6O2j4gv/zxvQGGOYETYXEc41h0iZXIRnRbJZGmY/QP8dvzqUelf8vg0p/yEA5VpCEu+WpZg==}
+    dev: false
+
+  /@vueuse/shared@10.4.1(vue@3.3.4):
+    resolution: {integrity: sha512-vz5hbAM4qA0lDKmcr2y3pPdU+2EVw/yzfRsBdu+6+USGa4PxqSQRYIUC9/NcT06y+ZgaTsyURw2I9qOFaaXHAg==}
+    dependencies:
+      vue-demi: 0.14.6(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /acorn-jsx@5.3.2(acorn@8.8.2):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1890,7 +1953,6 @@ packages:
 
   /estree-walker@0.6.1:
     resolution: {integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==}
-    dev: true
 
   /estree-walker@2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
@@ -2499,7 +2561,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
-    dev: true
 
   /luxon@2.5.2:
     resolution: {integrity: sha512-Yg7/RDp4nedqmLgyH0LwgGRvMEKVzKbUdkBYyCosbHgJ+kaOUx0qzSiSatVc3DFygnirTPYnMM2P5dg2uH1WvA==}
@@ -2510,7 +2571,6 @@ packages:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
     dependencies:
       sourcemap-codec: 1.4.8
-    dev: true
 
   /magic-string@0.30.0:
     resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
@@ -2695,6 +2755,10 @@ packages:
     resolution: {integrity: sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==}
     dev: false
 
+  /password-sheriff@1.1.1:
+    resolution: {integrity: sha512-bt0ptyUs97Fb2ZXUcdQP0RYrBFjzO6KhGTjq4RkmR388c6wcT3khG0U7Bvvqwq3DyShEZ9IACed9JMVyAxdaCA==}
+    dev: false
+
   /path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
@@ -2724,6 +2788,24 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
     dev: true
+
+  /pinia@2.1.6(typescript@4.9.5)(vue@3.3.4):
+    resolution: {integrity: sha512-bIU6QuE5qZviMmct5XwCesXelb5VavdOWKWaB17ggk++NUwQWWbP5YnsONTk3b752QkW9sACiR81rorpeOMSvQ==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.3.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.5.0
+      typescript: 4.9.5
+      vue: 3.3.4
+      vue-demi: 0.14.6(vue@3.3.4)
+    dev: false
 
   /pofile@1.0.11:
     resolution: {integrity: sha512-Vy9eH1dRD9wHjYt/QqXcTz+RnX/zg53xK+KljFSX30PvdDMb2z+c6uDUeblUGqqJgz3QFsdlA0IJvHziPmWtQg==}
@@ -2842,13 +2924,11 @@ packages:
       estree-walker: 0.6.1
       magic-string: 0.25.7
       rollup-pluginutils: 2.8.2
-    dev: true
 
   /rollup-plugin-node-polyfills@0.2.1:
     resolution: {integrity: sha512-4kCrKPTJ6sK4/gLL/U5QzVT8cxJcofO0OU74tnB19F40cmuAKSzH5/siithxlofFEjwvw1YAhPmbvGNA6jEroA==}
     dependencies:
       rollup-plugin-inject: 3.0.2
-    dev: true
 
   /rollup-plugin-serve@2.0.2:
     resolution: {integrity: sha512-ALqyTbPhlf7FZ5RzlbDvMYvbKuCHWginJkTo6dMsbgji/a78IbsXox+pC83HENdkTRz8OXrTj+aShp3+3ratpg==}
@@ -2861,7 +2941,6 @@ packages:
     resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
     dependencies:
       estree-walker: 0.6.1
-    dev: true
 
   /rollup@3.14.0:
     resolution: {integrity: sha512-o23sdgCLcLSe3zIplT9nQ1+r97okuaiR+vmAPZPTDYB7/f3tgWIYNyiQveMsZwshBT0is4eGax/HH83Q7CG+/Q==}
@@ -2906,7 +2985,6 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
-    dev: true
 
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -2944,7 +3022,6 @@ packages:
   /sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
     deprecated: Please use @jridgewell/sourcemap-codec instead
-    dev: true
 
   /stop-iteration-iterator@1.0.0:
     resolution: {integrity: sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==}
@@ -3172,6 +3249,21 @@ packages:
       vue: 3.3.4
     dev: false
 
+  /vue-demi@0.14.6(vue@3.3.4):
+    resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.3.4
+    dev: false
+
   /vue-eslint-parser@9.1.0(eslint@8.31.0):
     resolution: {integrity: sha512-NGn/iQy8/Wb7RrRa4aRkokyCZfOUWk19OP5HP6JEozQFX5AoS/t+Z0ZN7FY4LlmWc4FNI922V7cvX28zctN8dQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
@@ -3190,8 +3282,8 @@ packages:
       - supports-color
     dev: true
 
-  /vue-router@4.2.0(vue@3.3.4):
-    resolution: {integrity: sha512-c+usESa6ZoWsm4PPdzRSyenp5A4dsUtnDJnrI03fY1IpIihA9TK3x5ffgkFDpjhLJZewsXoKURapNLFdZjuqTg==}
+  /vue-router@4.2.4(vue@3.3.4):
+    resolution: {integrity: sha512-9PISkmaCO02OzPVOMq2w82ilty6+xJmQrarYZDkjZBfl4RvYAlt4PKnEX21oW4KTtWfa9OuO/b3qk1Od3AEdCQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -3296,7 +3388,6 @@ packages:
 
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-    dev: true
 
   /yaml@1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
@@ -3307,3 +3398,17 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  file:../web/packages/web-client(@casl/ability@6.5.0)(axios@0.27.2)(lodash-es@4.17.21):
+    resolution: {directory: ../web/packages/web-client, type: directory}
+    id: file:../web/packages/web-client
+    name: '@ownclouders/web-client'
+    peerDependencies:
+      '@casl/ability': ^6.3.3
+      axios: ^0.27.2 || ^1.0.0
+      lodash-es: ^4.17.21
+    dependencies:
+      '@casl/ability': 6.5.0
+      axios: 0.27.2
+      lodash-es: 4.17.21
+    dev: false
