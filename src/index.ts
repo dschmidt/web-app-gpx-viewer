@@ -1,6 +1,6 @@
 import App from './App.vue'
 import translations from '../l10n/translations.json'
-import { AppWrapperRoute } from '@ownclouders/web-pkg/src/components/AppTemplates/AppWrapperRoute'
+import { AppWrapperRoute } from '@ownclouders/web-pkg'
 
 // just a dummy function to trick gettext tools
 function $gettext(msg) {

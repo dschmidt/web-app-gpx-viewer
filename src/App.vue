@@ -10,7 +10,7 @@
 import { defineComponent, PropType } from 'vue'
 
 import LeafletMap from './components/LeafletMap.vue'
-import { AppConfigObject } from '@ownclouders/web-pkg/src/apps'
+import { AppConfigObject } from '@ownclouders/web-pkg'
 
 export default defineComponent({
   name: 'GpxViewerRoot',
