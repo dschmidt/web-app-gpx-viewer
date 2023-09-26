@@ -7,16 +7,13 @@ settings:
 dependencies:
   '@ownclouders/web-pkg':
     specifier: file:../web/packages/web-pkg
-    version: file:../web/packages/web-pkg(@casl/ability@6.5.0)(@casl/vue@2.2.1)(@microsoft/fetch-event-source@2.0.1)(@vueuse/core@10.4.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(js-generate-password@0.1.9)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(password-sheriff@1.1.1)(pinia@2.1.6)(qs@6.11.1)(semver@7.3.8)(uuid@9.0.0)(vue-router@4.2.0)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0)
+    version: file:../web/packages/web-pkg(@casl/ability@6.5.0)(@casl/vue@2.2.1)(@microsoft/fetch-event-source@2.0.1)(@vueuse/core@10.4.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(js-generate-password@0.1.9)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(password-sheriff@1.1.1)(pinia@2.1.6)(qs@6.11.1)(semver@7.3.8)(uuid@9.0.0)(vue-concurrency@4.0.1)(vue-router@4.2.0)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0)
   leaflet:
     specifier: ^1.8.0
     version: 1.8.0
   leaflet-gpx:
     specifier: ^1.7.0
     version: 1.7.0
-  rollup-plugin-node-polyfills:
-    specifier: ^0.2.1
-    version: 0.2.1
 
 devDependencies:
   '@ownclouders/eslint-config':
@@ -1174,6 +1171,10 @@ packages:
       semver: 7.3.8
     dev: true
 
+  /caf@15.0.1:
+    resolution: {integrity: sha512-Xp/IK6vMwujxWZXra7djdYzPdPnEQKa7Mudu2wZgDQ3TJry1I0TgtjEgwZHpoBcMp68j4fb0/FZ1SJyMEgJrXQ==}
+    dev: false
+
   /call-bind@1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
     dependencies:
@@ -1881,6 +1882,7 @@ packages:
 
   /estree-walker@0.6.1:
     resolution: {integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==}
+    dev: true
 
   /estree-walker@2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
@@ -2504,6 +2506,7 @@ packages:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
     dependencies:
       sourcemap-codec: 1.4.8
+    dev: true
 
   /magic-string@0.30.0:
     resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
@@ -2857,11 +2860,13 @@ packages:
       estree-walker: 0.6.1
       magic-string: 0.25.7
       rollup-pluginutils: 2.8.2
+    dev: true
 
   /rollup-plugin-node-polyfills@0.2.1:
     resolution: {integrity: sha512-4kCrKPTJ6sK4/gLL/U5QzVT8cxJcofO0OU74tnB19F40cmuAKSzH5/siithxlofFEjwvw1YAhPmbvGNA6jEroA==}
     dependencies:
       rollup-plugin-inject: 3.0.2
+    dev: true
 
   /rollup-plugin-serve@2.0.2:
     resolution: {integrity: sha512-ALqyTbPhlf7FZ5RzlbDvMYvbKuCHWginJkTo6dMsbgji/a78IbsXox+pC83HENdkTRz8OXrTj+aShp3+3ratpg==}
@@ -2874,6 +2879,7 @@ packages:
     resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
     dependencies:
       estree-walker: 0.6.1
+    dev: true
 
   /rollup@3.14.0:
     resolution: {integrity: sha512-o23sdgCLcLSe3zIplT9nQ1+r97okuaiR+vmAPZPTDYB7/f3tgWIYNyiQveMsZwshBT0is4eGax/HH83Q7CG+/Q==}
@@ -2955,6 +2961,7 @@ packages:
   /sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
     deprecated: Please use @jridgewell/sourcemap-codec instead
+    dev: true
 
   /stop-iteration-iterator@1.0.0:
     resolution: {integrity: sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==}
@@ -3173,6 +3180,15 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /vue-concurrency@4.0.1(vue@3.3.4):
+    resolution: {integrity: sha512-gzZjC8o9EE1/d7OEndI0C8lO09nkLSbviT94/gQR372iLVbYKZiGto87upjV9TAHodTfzbBgjyQXH53AVI5ugA==}
+    peerDependencies:
+      vue: ^3.2.20 || ^2.7.0
+    dependencies:
+      caf: 15.0.1
+      vue: 3.3.4
+    dev: false
+
   /vue-demi@0.14.6(vue@3.3.4):
     resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==}
     engines: {node: '>=12'}
@@ -3323,7 +3339,7 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  file:../web/packages/web-pkg(@casl/ability@6.5.0)(@casl/vue@2.2.1)(@microsoft/fetch-event-source@2.0.1)(@vueuse/core@10.4.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(js-generate-password@0.1.9)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(password-sheriff@1.1.1)(pinia@2.1.6)(qs@6.11.1)(semver@7.3.8)(uuid@9.0.0)(vue-router@4.2.0)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0):
+  file:../web/packages/web-pkg(@casl/ability@6.5.0)(@casl/vue@2.2.1)(@microsoft/fetch-event-source@2.0.1)(@vueuse/core@10.4.1)(axios@0.27.2)(filesize@9.0.11)(fuse.js@6.6.2)(js-generate-password@0.1.9)(lodash-es@4.17.21)(luxon@2.5.2)(mark.js@8.11.1)(password-sheriff@1.1.1)(pinia@2.1.6)(qs@6.11.1)(semver@7.3.8)(uuid@9.0.0)(vue-concurrency@4.0.1)(vue-router@4.2.0)(vue3-gettext@2.5.0-alpha.1)(vuex@4.1.0):
     resolution: {directory: ../web/packages/web-pkg, type: directory}
     id: file:../web/packages/web-pkg
     name: '@ownclouders/web-pkg'
@@ -3350,11 +3366,6 @@ packages:
       vue3-gettext: 2.5.0-alpha.1
       vuex: 4.1.0
       web-client: workspace:@ownclouders/web-client@*
-    peerDependenciesMeta:
-      vue-concurrency:
-        optional: true
-      web-client:
-        optional: true
     dependencies:
       '@casl/ability': 6.5.0
       '@casl/vue': 2.2.1(@casl/ability@6.5.0)(vue@3.3.4)
@@ -3372,6 +3383,7 @@ packages:
       qs: 6.11.1
       semver: 7.3.8
       uuid: 9.0.0
+      vue-concurrency: 4.0.1(vue@3.3.4)
       vue-router: 4.2.0(vue@3.3.4)
       vue3-gettext: 2.5.0-alpha.1(@vue/compiler-sfc@3.3.4)(vue@3.3.4)
       vuex: 4.1.0(vue@3.3.4)
