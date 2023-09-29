@@ -1,5 +1,6 @@
 import App from './App.vue'
 import translations from '../l10n/translations.json'
+import { AppWrapperRoute } from '@ownclouders/web-pkg'
 
 // just a dummy function to trick gettext tools
 function $gettext(msg) {
@@ -24,7 +25,12 @@ const appInfo = {
 const routes = [
   {
     path: '/:driveAliasAndItem(.*)?',
-    component: App,
+    component: AppWrapperRoute(App, {
+      applicationId: 'gpx-viewer',
+      urlForResourceOptions: {
+        disposition: 'inline'
+      }
+    }),
     name: 'gpx-viewer',
     meta: {
       authContext: 'hybrid',
