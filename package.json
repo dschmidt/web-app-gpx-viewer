@@ -11,9 +11,9 @@
   },
   "devDependencies": {
     "@ownclouders/eslint-config": "0.0.1",
-    "@ownclouders/extension-sdk": "0.0.1-alpha.4",
+    "@ownclouders/extension-sdk": "0.0.5-alpha.1",
     "@ownclouders/prettier-config": "0.0.1",
-    "@ownclouders/tsconfig": "0.0.4",
+    "@ownclouders/tsconfig": "0.0.5-alpha.1",
     "@types/leaflet": "^1.8.0",
     "@types/node": "^20.2.3",
     "eslint": "8.31.0",
@@ -28,6 +28,11 @@
     "leaflet-gpx": "^1.7.0"
   },
   "peerDependencies": {
-    "@ownclouders/web-pkg": "file:../web/packages/web-pkg"
+    "@ownclouders/web-pkg": "0.0.5-alpha.1"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["design-system*"]
+    }
   }
 }
