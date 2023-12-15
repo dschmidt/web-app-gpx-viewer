@@ -70,6 +70,9 @@ export default defineComponent({
 
     let gpxLayer = null
     const setView = () => {
+      if (!mapObject) {
+        return
+      }
       if (gpxLayer) {
         mapObject.removeLayer(gpxLayer)
       }

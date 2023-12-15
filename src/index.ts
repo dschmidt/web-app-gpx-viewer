@@ -11,6 +11,7 @@ import LocationPanel from './components/LocationPanel.vue'
 import GpxMap from './components/GpxMap.vue'
 
 import 'leaflet/dist/leaflet.css'
+import LocationFolderView from './components/LocationFolderView.vue'
 
 export default defineWebApplication({
   setup(args) {
@@ -36,7 +37,7 @@ export default defineWebApplication({
         () =>
           [
             {
-              id: 'com.github.owncloud.web.gpx-viewer.mapPanel',
+              id: 'com.github.owncloud.web.gpx-viewer.map-panel',
               type: 'sidebarPanel',
               scopes: ['resource'],
               panel: {
@@ -45,11 +46,30 @@ export default defineWebApplication({
                 iconFillType: 'line',
                 title: () => $gettext('Location'),
                 component: LocationPanel,
-                componentAttrs: (panelContext) => ({ panelContext, applicationConfig }),
+                componentAttrs: (panelContext) => ({
+                  resources: panelContext.items,
+                  applicationConfig
+                }),
                 isRoot: () => false,
                 isVisible: ({ items }) => {
                   return items?.length > 0 && items?.some((item) => !!item.location)
                 }
+              }
+            },
+            {
+              id: 'com.github.owncloud.web.gpx-viewer.folder-view.map-view',
+              type: 'folderView',
+              scopes: ['resource', 'favorite'],
+              folderView: {
+                name: 'resource-map',
+                label: $gettext('Switch to map view'),
+                icon: {
+                  name: 'map-2',
+                  fillType: 'line'
+                },
+                isScrollable: false,
+                component: LocationFolderView,
+                componentAttrs: () => ({ applicationConfig })
               }
             }
           ] satisfies Extension[]
