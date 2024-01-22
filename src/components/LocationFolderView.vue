@@ -2,7 +2,7 @@
   <div>
     <no-content-message v-if="!pinLocations.length" class="files-empty" icon="map-2">
       <template #message>
-        <span v-translate>No files with location data</span>
+        <span v-text="$gettext('No files with location data')"/>
       </template>
     </no-content-message>
     <div
