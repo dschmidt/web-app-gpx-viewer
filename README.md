@@ -1,3 +1,10 @@
+# ⚠ ATTENTION: Repository Archived
+
+This repository has been archived because the application now lives in [OpenCloud](https://github.com/opencloud-eu) [web-extensions](https://github.com/opencloud-eu/web-extensions/tree/main/packages/web-app-maps).
+
+<br><br>
+
+
 # ownCloud Web GPX Viewer
 
 [![Build Status](https://drone.owncloud.com/api/badges/owncloud/web-app-gpx-viewer/status.svg)](https://drone.owncloud.com/owncloud/web-app-gpx-viewer)
